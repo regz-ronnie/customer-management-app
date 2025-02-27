@@ -1,0 +1,17 @@
+<!-- templates/books/recommendations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Books</title>
+</head>
+<body>
+    <h1>Recommended Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }} (Rating: {{ book.rating }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'book_list' %}">Back to Book List</a>
+</body>
+</html>
